@@ -11,9 +11,10 @@
         /* + Josefin Sans: 200, 300 , 400 , 600 */
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&display=swap');
 
-:root{
+:root {
     /* ## Colors */
-        --background__color: #202124;
+        --body__background: #202124;
+        --body__color: #ffffff;
 
 
         --header__color__text: #ffffff;
@@ -32,13 +33,15 @@
         --search__color__icon: #9aa0a6;
         --search__color__icon_microfone: #4285f4;
         --search__color__input-border: #5f6368;
-        --search__color__input_hover: #303134;
+        --search__color__input_hover: #5f6368;
         --search__color__button: #303134;
 
 
         --credits__color__text: #bdc1c6;
         --credits__color__link: #3381ea;
 
+
+        --footer__background: #171717;
 
         --footer__color__text: #999da2;
         --footer__color__link__icon: #81cb52;
@@ -47,29 +50,239 @@
 
         /* Font Family por defecto 'Josefin sans' */
         --header__font_weight: 400;
-        --header__font_size: 18rem;
+        --header__font_size: 16rem;
+        --header__font_size__icon: 18rem;
 
         --search__font_weight: 400;
-        --search__font_size: 22rem;
+        --search__font_size: 16rem;
 
-        --credits__font_weight: 300;
-        --credits__font_size: 12rem;
+        --credits__font_weight: 400;
+        --credits__font_size: 14rem;
 
-        --footer__font_weight: 200;
+        --footer__font_weight: 400;
         --footer__font_size: 16rem;
+    
+    /* ## Sizes */
+        --header__icon_size: 40px;
 }
 
-html{
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    appearance: none;
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
     font-size: 6.25%;
 }
 
-body{
-    box-sizing: border-box;
+body {
+    padding: 20px;
 
-    appearance: none;
-    list-style: none;
-    text-decoration: none;
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: .1fr 1fr .3fr;
+    align-items: center;
 
     font-family: 'Josefin Sans', sans-serif;
     font-size: 16rem;
+
+    background-color: var(--body__background);
+    color: var(--body__color);
+}
+
+/* header */
+
+.header-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+
+    font-size: var(--header__font_size);
+    font-weight: var(--header__font_weight);
+}
+
+.header-box__link {
+    color: var(--header__color__text);
+}
+
+.header-box__link:hover {
+    text-decoration: underline;
+}
+
+.header-box__input {
+    display: none;
+}
+
+.header-box__icon {
+    cursor: pointer;
+
+    width: var(--header__icon_size);
+    height: var(--header__icon_size);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    font-size: var(--header__font_size__icon);
+    color: var(--header__color__icon);
+}
+
+.header-box__icon:hover {
+    background: var(--header__color__icon__background_hover);
+}
+
+.header-box__profile-img {
+    display: inline-block;
+
+    width: var(--header__icon_size);
+    height: var(--header__icon_size);
+
+    padding: 2px;
+    border-radius: 50%;
+    border: 2px solid var(--header__color__profile-img__background)
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo-container {
+    width: 40%;
+    max-width: 400px;
+}
+
+.search-box {
+    width: 70%;
+    max-width: 800px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.search-box__search {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: .1fr 1fr .1fr;
+    place-items: center;
+    
+    font-size: var(--search__font_size);
+
+    border-radius: 50px;
+    border: 1px solid var(--search__color__input-border);
+}
+
+.search-box__search__input {
+    width: 100%;
+
+    background: transparent;
+    color: var(--search__color__text);
+    font-size: var(--search__font_size);
+    font-weight: var(--search__font_weight);
+
+    border-right: 1px solid var(--search__color__input-border);
+}
+
+.search-box__search__icon {
+    color: var(--search__color__icon);
+}
+
+.search-box__search__icon_microfone {
+    color: var(--search__color__icon_microfone);
+}
+
+.search-box__button-box {
+    display: flex;
+    gap: 20px;
+}
+
+.search-box__button-box__button {
+    padding: 10px;
+
+    background: var(--search__color__button);
+    color: var(--search__color__text);
+    border-radius: 6px;
+
+    font-size: var(--search__font_size);
+    text-align: center;
+}
+
+.search-box__button-box__button:hover {
+    border: 1px solid var(--search__color__input_hover);
+}
+
+.credits {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    color: var(--credits__color__text);
+    font-size: var(--credits__font_size);
+    font-weight: var(--credits__font_weight);
+}
+
+.credits__link {
+    color: var(--credits__color__link)
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 20px 40px;
+
+    display: flex;
+    justify-content: space-around;
+
+    background: var(--footer__background);
+}
+
+.footer-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-box__leaf {
+    order: 1;
+}
+
+.footer-box__end {
+    order: 2;
+}
+
+.footer-box__link {
+    font-size: var(--footer__font_size);
+    font-weight: var(--footer__font_weight);
+    color: var(--footer__color__text);
+}
+
+.footer-box__link:hover {
+    text-decoration: underline;
+}
+
+.footer-box__link__icon {
+    color: var(--footer__color__link__icon);
 }

@@ -1,0 +1,13 @@
+@media screen and (max-width: 1024px) and (min-width: 429px){
+    footer{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-row-gap: 30px;
+    }
+
+    .footer-box__leaf {
+        grid-row-start: 1;
+        grid-column: span 2;
+    }
+}

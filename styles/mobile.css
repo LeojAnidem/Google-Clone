@@ -1,0 +1,26 @@
+@media screen and (max-width: 428px){
+    body{
+        --footer__font_size: 14rem;
+    }    
+
+    .logo-container {
+        width: 80%;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-box__button-box {
+        gap: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-box__leaf {
+        order: 0;
+    }
+}

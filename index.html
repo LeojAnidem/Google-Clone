@@ -38,7 +38,7 @@
             </a>
 
             <div>
-                <input type="checkbox" id="apps-panel">
+                <input class="header-box__input" type="checkbox" id="apps-panel">
                 <label 
                     class="header-box__icon"
                     for="apps-panel"
@@ -48,7 +48,7 @@
             </div>
 
             <div>
-                <input type="checkbox" id="profile-panel">
+                <input class="header-box__input" type="checkbox" id="profile-panel">
                 <label 
                     class="header-box__profile-img"
                     for="profile-panel"
@@ -65,9 +65,16 @@
 
     <main>
         <div class="logo-container">
-            <img
+            <!-- <img
                 class="logo-container__img" 
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1280px-Google_2015_logo.svg.png" 
+                alt="Google-logo"
+                width="100%"
+            > -->
+
+            <img
+                class="logo-container__img" 
+                src="https://fuelcycle.com/wp-content/uploads/2021/06/Google-Logo-White.png" 
                 alt="Google-logo"
                 width="100%"
             >
@@ -79,37 +86,39 @@
                     <i class="search-box__search__icon fas fa-search"></i>
                 </label>
     
-                <input type="text" id="search">
+                <input class="search-box__search__input" type="text" id="search">
     
                 <i class="search-box__search__icon_microfone fas fa-microphone"></i>
             </div>
 
-            <div class="search-box__item">
-                <button class="search-box__item__button">
+            <div class="search-box__button-box">
+                <button class="search-box__button-box__button">
                     Buscar con Google
                 </button>
 
-                <button class="search-box__item__button">
+                <button class="search-box__button-box__button">
                     Me siento con suerte
                 </button>
             </div>
         </div>
 
         <div class="credits">
-            <span class="credits__text">Ofrecido por Google en:</span>
-            <a class="credits__link" href=".">English</a>
+            <span>
+                Ofrecido por Google en:
+                <a class="credits__link" href=".">English</a>
+            </span>
 
             <!-- Design with <3 by Leoj_Anidem -->
         </div>
     </main>
 
     <footer>
-        <nav class="footer-box">
+        <nav class="footer-box footer-box__leaf">
             <a 
                 class="footer-box__link"
                 href="https://sustainability.google/intl/es-419/carbon-free/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=#home"
             >
-                <i class="footer__link__icon fas fa-leaf"></i>
+                <i class="footer-box__link__icon fas fa-leaf"></i>
                 Con emisión neutra de carbono desde 2007
             </a>
         </nav>
@@ -144,7 +153,7 @@
             </a>
         </nav>
 
-        <nav class="footer-box">
+        <nav class="footer-box footer-box__end">
             <a 
                 class="footer-box__link"
                 href="https://policies.google.com/privacy?hl=es-419&fg=1"
