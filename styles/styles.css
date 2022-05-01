@@ -1,0 +1,75 @@
+/* ## Imports Fonts & Icons */
+    
+    /* # Styles */
+        /* Mobile */
+        @import url(./mobile.css);
+
+        /* Tablet */
+        @import url(./tablet.css);
+
+    /* # Fonts */
+        /* + Josefin Sans: 200, 300 , 400 , 600 */
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&display=swap');
+
+:root{
+    /* ## Colors */
+        --background__color: #202124;
+
+
+        --header__color__text: #ffffff;
+        
+        --header__color__icon: #e2e2e2;
+        --header__color__icon__background_hover: #303134;
+        --header__color__icon__background_click: #3b3c3f;
+        --header__color__icon__click: #ffffff;
+
+        --header__color__profile-img__background: #5f6368;
+
+        --header__color__panel-backgroung: #2d2e30;
+
+
+        --search__color__text: #ffffff;
+        --search__color__icon: #9aa0a6;
+        --search__color__icon_microfone: #4285f4;
+        --search__color__input-border: #5f6368;
+        --search__color__input_hover: #303134;
+        --search__color__button: #303134;
+
+
+        --credits__color__text: #bdc1c6;
+        --credits__color__link: #3381ea;
+
+
+        --footer__color__text: #999da2;
+        --footer__color__link__icon: #81cb52;
+
+    /* ## Font family, weight, size */
+
+        /* Font Family por defecto 'Josefin sans' */
+        --header__font_weight: 400;
+        --header__font_size: 18rem;
+
+        --search__font_weight: 400;
+        --search__font_size: 22rem;
+
+        --credits__font_weight: 300;
+        --credits__font_size: 12rem;
+
+        --footer__font_weight: 200;
+        --footer__font_size: 16rem;
+}
+
+html{
+    font-size: 6.25%;
+}
+
+body{
+    box-sizing: border-box;
+
+    appearance: none;
+    list-style: none;
+    text-decoration: none;
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16rem;
+}
